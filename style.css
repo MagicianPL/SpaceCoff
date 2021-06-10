@@ -178,6 +178,11 @@ h2 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background-image: url("img/bgnumber.jpg");
+	background-size: cover;
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
 }
 
 #numbers-wrapper > div:nth-of-type(3) {
@@ -197,6 +202,7 @@ h2 {
 	font-family: Times New Roman;
 	font-style: italic;
 	padding: 0 2rem 0 2rem;
+	color: #5b2601;
 }
 
 #page-two {
@@ -286,9 +292,9 @@ h3 {
 }
 
 .person:hover::before {
-	background-image: url("img/universe.jpg");
 	background-size: cover;
 	opacity: 0.3;
+	background-image: url("img/universe.jpg");
 }
 
 .person img {
@@ -331,6 +337,18 @@ footer {
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
 	opacity: 0.8;
+	position: relative;
+}
+
+footer::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background-color: black;
+	opacity: 0.5;
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
 }
 
 a, a:hover, a:visited, a:active {

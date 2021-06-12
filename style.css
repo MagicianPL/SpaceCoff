@@ -291,6 +291,8 @@ h3 {
 	margin-top: 7rem;
 	font-weight: bold;
 	animation: font-size 6s ease infinite;
+	overflow: hidden;
+	white-space: nowrap;
 }
 
 @keyframes font-size {

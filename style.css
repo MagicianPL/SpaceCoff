@@ -529,6 +529,24 @@ a, a:hover, a:visited, a:active {
 		line-height: 6.2rem;
 	}
 	
+	#bg > p:nth-child(4) {
+		font-size: 3.5rem;
+	}
+	
+	@keyframes font-size {
+		25% {
+			font-size: 4rem;
+		}
+		
+		50% {
+			font-size: 3.5rem;
+		}
+		
+		100% {
+			font-size: 3.5rem;
+		}
+	}
+	
 	#persons {
 		flex-direction: column;
 		justify-content: center;
@@ -633,19 +651,23 @@ a, a:hover, a:visited, a:active {
 		line-height: 6.2rem;
 	}
 	
+	#bg > p:nth-child(4) {
+		font-size: 3rem;
+	}
+	
 	@keyframes font-size {
-	25% {
-		font-size: 5.5rem;
+		25% {
+			font-size: 3.5rem;
+		}
+		
+		50% {
+			font-size: 3rem;
+		}
+		
+		100% {
+			font-size: 3rem;
+		}
 	}
-	
-	50% {
-		font-size: 5rem;
-	}
-	
-	100% {
-		font-size: 5rem;
-	}
-}
 	
 	h3 {
 		font-size: 10rem;
@@ -775,23 +797,27 @@ a, a:hover, a:visited, a:active {
 		line-height: 10rem;
 	}
 	
-		#bg p {
+	#bg p {
 		line-height: 6.2rem;
 	}
 	
+	#bg > p:nth-child(4) {
+		font-size: 4rem;
+	}
+	
 	@keyframes font-size {
-	25% {
-		font-size: 5.5rem;
+		25% {
+			font-size: 4.5rem;
+		}
+		
+		50% {
+			font-size: 4rem;
+		}
+		
+		100% {
+			font-size: 4rem;
+		}
 	}
-	
-	50% {
-		font-size: 5rem;
-	}
-	
-	100% {
-		font-size: 5rem;
-	}
-}
 	
 	#persons {
 		flex-direction: column;

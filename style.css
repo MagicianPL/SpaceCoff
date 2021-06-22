@@ -107,7 +107,7 @@ ul > li:hover {
 }
 
 main {
-	padding-top: 14rem;
+	padding-top: 7rem;
 	font-family: 'Baloo Tammudu 2'
 }
 
@@ -117,7 +117,7 @@ main {
 
 h2 {
 	text-align: center;
-	font-size: 9rem;
+	font-size: 8rem;
 	color: white;
 	text-shadow: 2px 2px 4px #000000;
 	margin-bottom: 10rem;
@@ -237,6 +237,14 @@ h2 {
 	transform: translateY(50%);
 }
 
+.text:nth-child(4) {
+	padding-right: 0;
+}
+
+.text:last-child {
+	padding-right: 0;
+}
+
 
 
 #page-two {
@@ -310,12 +318,15 @@ h3 {
 }
 
 #page-three {
-	padding-top: 14rem;
+	padding-top: 10rem;
+}
+
+#page-three h2 {
+	margin-bottom: 0;
 }
 
 #persons {
 	display: flex;
-	margin-top: 7rem;
 	justify-content: space-around;
 	padding: 2rem 3rem 0 3rem;
 	box-sizing: border-box;
@@ -330,8 +341,8 @@ h3 {
 	top: 0;
 	height: 40rem;
 	/*background-color: #49311d;*/
-background: rgb(2,0,36);
-background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(73,49,29,1) 0%, rgba(255,0,5,1) 0%, rgba(236,4,6,1) 1%, rgba(73,49,29,1) 99%, rgba(194,10,19,1) 100%, rgba(2,40,77,1) 100%, rgba(1,157,198,1) 100%, rgba(0,212,255,1) 100%);
+	background: rgb(236,4,6);
+	background: linear-gradient(0deg, rgba(236,4,6,1) 0%, rgba(130,11,17,1) 65%);
 	
 }
 
@@ -425,17 +436,16 @@ footer {
 	-moz-border-radius: 6px;
 	opacity: 0.8;
 	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 3rem;
+	font-weight: bold;
 }
 
-footer::after {
-	content: "";
-	position: absolute;
-	inset: 0;
-	background-color: brown;
-	opacity: 0.6;
-	border-radius: 6px;
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
+footer span {
+	color: brown;
+	font-size: 3.5rem;
 }
 
 a, a:hover, a:visited, a:active {
@@ -579,6 +589,10 @@ a, a:hover, a:visited, a:active {
 	#sentence {
 		font-size: 4.5rem;
 	}
+	
+	footer {
+		font-size: 2.5rem;
+	}
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
@@ -705,6 +719,10 @@ a, a:hover, a:visited, a:active {
 	
 	#sentence {
 		font-size: 4.5rem;
+	}
+	
+	footer {
+		font-size: 2.2rem;
 	}
 }
 
@@ -850,6 +868,10 @@ a, a:hover, a:visited, a:active {
 	
 	#sentence {
 		font-size: 4.5rem;
+	}
+	
+	footer {
+		font-size: 2.8rem;
 	}
 }
 

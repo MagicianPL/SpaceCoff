@@ -17,7 +17,6 @@ if (mediaQueryThousand.matches) {
 window.addEventListener('scroll', function() {
 const divRect = myDiv.getBoundingClientRect();
 const divY = divRect.height/2 + divRect.top;
-console.log(divY);
 
 if (divY < window.innerHeight) {
 	one.classList.add("appearing");
@@ -61,3 +60,31 @@ if (divY < window.innerHeight) {
 	textFour.classList.add("appearing");
 }});
 };
+
+
+//Poniżej skrypt dla licznika lotu w kosmos
+
+const spans = document.querySelectorAll("footer span");
+
+let year = null;
+
+function clock() {
+const today = new Date();
+let wydarzenie = new Date (2021, 5, 30, 18, 05);
+const pozostalyCzas = wydarzenie - today;
+const sekundy = pozostalyCzas / 1000;
+const minuty = (pozostalyCzas / 1000) / 60;
+const godziny = minuty / 60;
+const dni = godziny / 24;
+
+const sLeft = Math.floor(sekundy % 60);
+const mLeft = Math.floor(minuty % 60);
+const hLeft = Math.floor(godziny % 24);
+const dLeft = Math.floor(dni);
+
+spans[0].textContent = dLeft;
+spans[1].textContent = hLeft;
+spans[2].textContent = mLeft;
+};
+
+setInterval(clock, 1000);

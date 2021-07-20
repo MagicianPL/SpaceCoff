@@ -66,25 +66,43 @@ if (divY < window.innerHeight) {
 
 const spans = document.querySelectorAll("footer span");
 
-let year = null;
+const clock = () => {
+	const today = new Date();
+	todayYear = today.getFullYear();
+	todayMonth = today.getMonth();
+	todayDay = today.getDay();
 
-function clock() {
-const today = new Date();
-let wydarzenie = new Date (2021, 5, 30, 18, 05);
-const pozostalyCzas = wydarzenie - today;
-const sekundy = pozostalyCzas / 1000;
-const minuty = (pozostalyCzas / 1000) / 60;
-const godziny = minuty / 60;
-const dni = godziny / 24;
+	let eventMonth = todayMonth;
+	let eventDay = 25;
+	let bigDate;
 
-const sLeft = Math.floor(sekundy % 60);
-const mLeft = Math.floor(minuty % 60);
-const hLeft = Math.floor(godziny % 24);
-const dLeft = Math.floor(dni);
+	const setDate = () => {			/*Funcja która ustawi dobrą datę*/
+		if (eventDay <= todayDay) {
+			eventMonth = todayMonth + 1;
+		};
+	};
 
-spans[0].textContent = dLeft;
-spans[1].textContent = hLeft;
-spans[2].textContent = mLeft;
+	const eventDate = () => {
+		setDate();
+		bigDate = new Date (todayYear, eventMonth, eventDay, 18, 05);
+	};
+	
+	eventDate();
+	
+	const remainingTime = bigDate - today;
+	const seconds = remainingTime / 1000;
+	const minutes = (remainingTime / 1000) / 60;
+	const hours = minutes / 60;
+	const days = hours / 24;
+	
+	const sLeft = Math.floor(seconds % 60);
+	const mLeft = Math.floor(minutes % 60);
+	const hLeft = Math.floor(hours % 24);
+	const dLeft = Math.floor(days);
+	
+	spans[0].textContent = dLeft;
+	spans[1].textContent = hLeft;
+	spans[2].textContent = mLeft;
 };
 
 setInterval(clock, 1000);

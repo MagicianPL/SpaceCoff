@@ -66,28 +66,35 @@ if (divY < window.innerHeight) {
 
 const spans = document.querySelectorAll("footer span");
 
-const clock = () => {
-	const today = new Date();
-	todayYear = today.getFullYear();
-	todayMonth = today.getMonth();
-	todayDay = today.getDay();
+let today;
+let todayYear;
+let todayMonth;
+let todayDay;
 
-	let eventMonth = todayMonth;
-	let eventDay = 25;
-	let bigDate;
+let eventMonth;
+let eventDay = 25;
+let bigDate;
 
-	const setDate = () => {			/*Funcja która ustawi dobrą datę*/
+const setDate = () => {			/*Funcja która ustawi dobrą datę*/
 		if (eventDay <= todayDay) {
 			eventMonth = todayMonth + 1;
-		};
+			
+		} else {
+			
+		}
+		
+		bigDate = new Date (todayYear, eventMonth, eventDay, 18, 05);	
 	};
 
-	const eventDate = () => {
-		setDate();
-		bigDate = new Date (todayYear, eventMonth, eventDay, 18, 05);
-	};
-	
-	eventDate();
+const clock = () => {
+	today = new Date();
+	todayYear = today.getFullYear();
+	todayMonth = today.getMonth();
+	todayDay = today.getDate();
+
+	eventMonth = todayMonth;
+
+	setDate();
 	
 	const remainingTime = bigDate - today;
 	const seconds = remainingTime / 1000;
@@ -103,6 +110,7 @@ const clock = () => {
 	spans[0].textContent = dLeft;
 	spans[1].textContent = hLeft;
 	spans[2].textContent = mLeft;
+	
 };
 
 setInterval(clock, 1000);

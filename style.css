@@ -112,9 +112,6 @@ main {
 	font-family: 'Baloo Tammudu 2'
 }
 
-#page-one {
-	padding-bottom: 15rem;
-}
 
 h2 {
 	text-align: center;
@@ -181,10 +178,21 @@ h2 {
 #numbers-wrapper {
 	display: flex;
 	box-sizing: border-box;
-	padding: 0 3rem 0 3rem;
+	padding: 0 3rem 15rem 3rem;
 	justify-content: center;
 	flex-wrap: wrap;
 	font-family: Times New Roman;
+	position: relative;
+}
+
+#numbers-wrapper::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background-image: url("img/coffe-cup.jpg");
+	background-size: cover;
+	background-position: center;
+	opacity: 0.3;
 }
 
 .appearing {
@@ -455,7 +463,7 @@ a, a:hover, a:visited, a:active {
  }
  
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (max-width: 480px) {
 	html {
 		font-size: 25%;
 	}
